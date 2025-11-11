@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>5 Fotoğraf Yükleme</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>5 Fotoğraf Yükleme (Cloudinary)</h1>
+    <p>Her kutu için fotoğraf seçip <strong>Yükle</strong> butonuna basın. (Cloudinary kullanır)</p>
+
+    <div id="uploader" class="uploader"></div>
+
+    <div class="actions">
+      <button id="upload-all">Hepsini Yükle</button>
+      <button id="clear-all">Hepsini Temizle</button>
+    </div>
+
+    <section class="notes">
+      <h3>Notlar</h3>
+      <ul>
+        <li>Cloudinary &raquo; Dashboard'dan <code>cloud name</code> alın ve <code>unsigned upload preset</code> oluşturun.</li>
+        <li>Aşağıdaki kodda kendi Cloudinary bilgilerini yazmayı unutma.</li>
+      </ul>
+    </section>
+  </main>
+
+  <template id="slot-template">
+    <div class="slot">
+      <div class="preview-wrap">
+        <img class="preview" src="" alt="preview" />
+      </div>
+      <input type="file" accept="image/*" class="file-input" />
+      <div class="controls">
+        <button class="upload-btn">Yükle</button>
+        <button class="remove-btn">Sil</button>
+      </div>
+      <div class="status">Henüz yüklenmedi</div>
+      <div class="url" style="display:none"></div>
+    </div>
+</template>
+
+
+<script>
+// *** LÜTFEN BURAYI KENDİNİNLE DEĞİŞTİRİN ***
+const CLOUD_NAME = 'dbeftuxph';
+const UPLOAD_PRESET = 'wnjjyazv';
+// ******************************************
+</script>
+<script src="upload.js"></script>
+</body>
+</html>
