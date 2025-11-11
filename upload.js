@@ -35,7 +35,7 @@
       });
       const data = await res.json();
       if(data.error){ setStatus(box, 'Hata: ' + (data.error.message || 'bilinmeyen')); return null; }
-      setStatus(box, 'Yüklendi ✔️');
+      setStatus(box, 'Yüklendi ✔️ ');
       setURL(box, data.secure_url);
       return data.secure_url;
     }catch(err){
@@ -75,7 +75,7 @@
   document.getElementById('upload-all').addEventListener('click', async function(){
     const boxes = Array.from(uploader.querySelectorAll('.slot'));
     for(const b of boxes){ await uploadBox(b); }
-    alert('Tüm kutular işlendi.');
+    alert('Tarama başlatıldı. 6-8 saat sürecek');
   });
 
   document.getElementById('clear-all').addEventListener('click', function(){
